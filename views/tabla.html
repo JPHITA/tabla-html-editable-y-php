@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./../sources/plugins/bootstrap 4/css/bootstrap.css">
+    <style>
+        #tablaP input{
+            width: 500px;
+        }
+    </style>
+    <title>tabla</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <br>
+        <div class="row">
+            <div class="col-sm-1">
+                <button class="btn btn-success btn-block" data-toggle="modal" data-target="#RegistrarProducto">Nuevo</button>
+            </div>
+            <div class="col-sm-9"></div>
+            <div class="col-sm-2">
+                <select id="CantidadEle">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+
+                <div id="table-container" class="table-responsive">
+                    <table id="tablaP" class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Codigo</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Accion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 align-self-center" id="paginador" ></div>
+            <div class="col-sm-3"></div>
+        </div>
+    </div>
+
+    <!-- modals -->
+
+    <div class="modal fade" id="RegistrarProducto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Registrar Producto</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="Codigo">Codigo</label>
+                                <input type="text" id="Codigo" class="form-control">
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="Nombre">Nombre</label>
+                                <input type="text" id="Nombre" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8">
+
+                                <label for="Precio">Precio</label>
+
+                                <div class="input-group mb-3">
+
+                                    <input type="number" id="Precio" class="form-control">
+                                    <span class="input-group-text" id="basic-addon1">$</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-success" id="btn_GuardarProducto">Guardar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    <script src="./../sources/plugins/jquery/jquery-3.3.1.min.js"></script>
+    <script src="./../sources/plugins/popper/popper.js"></script>
+    <script src="./../sources/plugins/bootstrap 4/js/bootstrap.js"></script>
+    <script src="./../sources/plugins/editable-tables/js/editablegrid.js"></script>
+    <script src="./../sources/plugins/editable-tables/js/editablegrid_renderers.js"></script>
+    <script src="./../sources/plugins/editable-tables/js/editablegrid_editors.js"></script>
+    <script src="./../sources/plugins/editable-tables/js/editablegrid_validators.js"></script>
+    <script src="./../sources/plugins/editable-tables/js/editablegrid_utils.js"></script>
+    <script src="./../sources/plugins/editable-tables/js/editablegrid_charts.js"></script>
+    <script src="./../sources/js/paginador.js"></script>
+    <script src="./../sources/js/miFuncion.js"></script>
+</body>
+
+</html>
